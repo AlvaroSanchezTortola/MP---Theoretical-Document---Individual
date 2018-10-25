@@ -1,30 +1,65 @@
 \chapter{Marco Metodológico}
-Determinación de la población de estudio, la cual debe contar con características similares, como, por ejemplo: diestros, del mismo sexo, en un rango de edad de seis años. Un estudio con un número de participantes mayor a veintidós puede aportar mejores resultados (Davatzikos et al., 2005). Sobre la población de estudio, se conducen las pruebas para determinar el engaño. 
+\section{Proceso de Obtención de Datos}
+El proceso de obtención de datos para el entrenamiento de los algoritmos se realizó por medio de entrevistas a distintos individuos. La población objetivo para estas entrevistas se delimitó a estudiantes y colaboradores de la Universidad del Valle de Guatemala. El proceso de extracción de información se realizó mediante pruebas dentro de estas entrevistas, a las cuales los individuos de estudio se ofrecían voluntariamente para tomarlas mediante una solicitud con un formulario electrónico en línea. Estas pruebas fueron realizadas en un ambiente controlado dentro de las instalaciones de las Clínicas de Psicología de la Universidad del valle de Guatemala, durante los meses de marzo y abril del año 2018. 
 
-Utilización de un método para conducir al engaño en la población de estudio, como, por ejemplo, un juego con cartas con instrucciones contradictorias, en donde se maneje dinero (Davatzikos et al., 2005). De igual manera, puede manejarse una prueba en donde se motive a los sujetos de prueba a decir la verdad, o a decir una mentira sin ser detectados por los investigadores, involucrando de igual manera dinero para aumentar dicha motivación y ansiedad (Revell et al., 2004). Una prueba con características similares se efectúa con los individuos de estudio. Durante este proceso, se obtiene información del dispositivo Emotiv, en donde se leen las señales electroencefalográficas. 
+Estas entrevistas se realizaron a cincuenta y seis (56) sujetos pertenecientes al grupo de estudio objetivo. Un estudio con un número de participantes mayor a veintidós puede aportar mejores resultados (Davatzikos et al., 2005). Cada participante proporcionó algunos datos personales para determinar datos  sobre la población en la cual se realizó el experimento. Estos datos incluyen género, edad, lateralidad, escolaridad, grupo étnico, estado civil, sector de población universitaria a la que pertenecen, empleo y acompañamiento psicológico. De igual manera, se realizaron pruebas psicometrícas a los individuos de estudio durante el proceso de entrevista, acompañados por estudiantes de la facultad de Psicología. Además que estos datos permiten determinar posibles variables relacionadas con el engaño, estos también pueden ser útiles para las personas que deseen utilizar el conjunto de datos para otros estudios o para continuar el presente trabajo.
 
-Análisis de los datos para poder ser clasificados. Utilizar statistical parametric mapping para procesar y analizar datos funcionales. Corregir los tiempos de las imágenes, normalizar las pruebas e interpolarlas. Suavizar las imágenes con métodos gaussianos (Davatzikos et al., 2005). De esta manera, se obtiene información estandarizada para los algoritmos a utilizar. Este proceso de análisis de los datos se encuentra luego de obtener los datos de los individuos, y antes de ser clasificados por los algoritmos a utilizar. De estos datos obtenidos, se utilizará más del cincuenta por ciento para entrenar al algoritmo. El resto se utilizarán para la validación de datos. 
+Durante las entrevistas realizadas, se pidió a los participantes responder a una serie de preguntas seleccionadas que un moderador les realizaría. Estas preguntas se realizaron durante dos rondas. En la primera ronda, se solicitó al sujeto que respondiera a las preguntas diciendo la verdad. En la segunda ronda, se realizaron las mismas preguntas, pero se solicitó al sujeto que respondiera con falacias. Durante estas rondas de preguntas, la extracción de la información se realizó por medio de distintos instrumentos de medición relacionados a los módulos del proyecto. Las entrevistas fueron grabadas con vídeo y audio, además de utilizar los instrumentos de medición de ondas electroencefalográficas.
 
-Utilizar Support Vector Machine no lineal para clasificar los datos. En pruebas similares, con veintidós participantes, se analizaron 560 variables, con 1056 imágenes de estimación de parámetros de pruebas (Davatzikos et al., 2005). Se espera analizar un valor igual o mayor de variables con este algoritmo, dado el mayor número de participantes.
+La obtención de datos de la actividad electroencefalográfica de los sujetos se realzó mediante el uso de un casco \textit{Emotiv EPOC} y su conexión a un ordenador con el panel de control \textit{Emotiv Xavier}. El uso del dispositivo para la extracción de la información se hizo empleando el proyecto \textit{EMOTRIX}. El proyecto Emotrix es una plataforma que permitirá el estudio, identificación y manipulación de emociones humanas. La plataforma se podrá utilizar para fines educativos, médicos o recreacionales, entre otros. A la fecha, existen distintos dispositivos que permiten imitar inteligencia emocional, los cuales tienen precios elevados. Es por esto por lo que la plataforma tiene un enfoque de código libre para permitir el desarrollo de forma abierta y evitar cualquier tipo de restricciones a los usuarios. El ámbito al que pertenece el proyecto es a la interacción humano – computador (HCI). Este proyecto ha sido desarrollado desde 2016 por estudiantes de la Universidad del Valle de Guatemala.
 
-Determinar el valor de efectividad de detección del engaño de este algoritmo, a partir de los datos obtenidos en la prueba realizada reservados para la validación del algoritmo. Esto consistirá en medir la cantidad de aciertos que el algoritmo tenga cuando se busque predecir el resultado de los participantes. Ya que efectivamente se posee la respuesta de estos, se puede obtener un valor de aciertos del algoritmo con respecto al valor real estudiado.   
+\section{Análisis Exploratorio de los Datos}
+Se obtuvieron una serie de variables de distintos tipos procedentes de las pruebas realizadas en las entrevistas. Se obtuvieron quince (15) variables procedentes de Emotiv EPOC, referentes a los canales de lectura del mismo. Se obtuvieron doce (12) variables descriptivas de los individuos entrevistados y de sus pruebas psicométricas asociadas. Estas últimas son género, edad, lateralidad, escolaridad, grupo étnico, estado civil, prueba l1 ,prueba l2, sector de la población de la universidad a la que pertenecen, empleo, acompañamiento psicológico y tipo de acompañamiento psicológico. Para un total de veintisiete variables. De las variables electroencefalográficas, se tomó únicamente las que procedían de los transmisores ubicados en los lóbulos frontales. Esto se debe a que se sugiere que las emociones relacionadas con el engaño se encuentran en esta parte del cerebro humano (Belmonte C., 2007). Por lo que se trabajaron ocho (8) variables de este tipo, referente a los canales AF3, AF4, F3, F4, F7, F8, FC5 y FC6. 
 
-\begin{center}
-\includegraphics[height=2.15in]{figuras/Imagen4.png}
-\end{center}
+\begin{figure}
+    \centering
+    \includegraphics[scale=1]{figuras/Imagen2.png}
+    \caption{Electrodos EPOC a considerar para la selección de variables.}
+    \label{fig:my_label}
+\end{figure}
 
-\begin{center}
-\includegraphics[height=2.15in]{figuras/Imagen3.png}
-\end{center}
 
-\begin{center}
-\includegraphics[height=2.15in]{figuras/Imagen2.png}
-\end{center}
 
+
+\section{Construcción del Conjunto de Datos de Entrenamiento}
+\section{Desarrollo del Modelo de Clasificación}
+\section{Desarrollo del la Interfaz de Respuesta}
 
 
 
 \chapter{Resultados}
+A estas variables se les realizó un análisis de regresión logística y de árboles de decisión para obtener las más significativas para el estudio. Estos análisis fueron realizados empleando el lenguaje de programación R y el software \textit{RStudio}. Los resultados de estos análisis se muestran a continuación:
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=1]{figuras/Capture4.PNG}
+    \caption{Resultados del análisis de regresión logística.}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.75]{figuras/Rplot1.png}
+    \caption{Resultados del análisis de árbol de decisión.}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.75]{figuras/Rplot2.png}
+    \caption{Resultados del análisis de árbol de decisión.}
+    \label{fig:my_label}
+\end{figure}
+
+A partir de estos resultados, se obtuvieron las variables más significativas para poder entrenar los algoritmos de aprendizaje de máquina. Estas son un total de catorce (14) variables, ocho (8) de electroencefalograma y seis (6) de variables descriptivas. Estas variables descriptivas son: edad, lateralidad, escolaridad, empleo y acompañamiento psicológico. 
+
+
+
+
+
+
+
+
 
 \begin{center}
 \includegraphics[height=1.15in]{figuras/Imagen11.png}
@@ -62,13 +97,7 @@ Determinar el valor de efectividad de detección del engaño de este algoritmo, 
 \includegraphics[height=1.15in]{figuras/Imagen19.png}
 \end{center}
 
-\begin{center}
-\includegraphics[height=3.0in]{figuras/Imagen5.png}
-\end{center}
 
-\begin{center}
-\includegraphics[height=3.0in]{figuras/Imagen6.png}
-\end{center}
 
 \begin{center}
 \includegraphics[height=2.35in]{figuras/Imagen7.png}
@@ -86,17 +115,7 @@ Determinar el valor de efectividad de detección del engaño de este algoritmo, 
 \includegraphics[height=3.0in]{figuras/Imagen10.png}
 \end{center}
 
-\begin{center}
-\includegraphics[height=3.3in]{figuras/Capture4.PNG}
-\end{center}
 
-\begin{center}
-\includegraphics[height=3.0in]{figuras/Rplot1.png}
-\end{center}
-
-\begin{center}
-\includegraphics[height=3.0in]{figuras/Rplot2.png}
-\end{center}
 
 \begin{center}
 \includegraphics[height=3.0in]{figuras/Figure_1.png}
@@ -121,6 +140,11 @@ Determinar el valor de efectividad de detección del engaño de este algoritmo, 
 
 
 \chapter{Análisis de Resultados}
+
+
+
+
+
 %\section{Dinámica de cuerpos rígidos}
 %\section{Restricciones}
 %\subsection{Mecanismos de lazo cerrado}
